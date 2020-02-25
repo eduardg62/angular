@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { stringify } from 'querystring';
 
 @Component({
@@ -6,10 +6,12 @@ import { stringify } from 'querystring';
   templateUrl: './user-model.component.html',
   styleUrls: ['./user-model.component.css']
 })
+
 export class UserModelComponent implements OnInit {
    
     public id:number = 0;
     public username = "john_d";
+
     public email= "john.doe@gmail.com";
     public info= {
       firstName:"john",
@@ -27,5 +29,4 @@ export class UserModelComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

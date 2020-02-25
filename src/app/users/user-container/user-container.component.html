@@ -4,14 +4,24 @@
         <input type="text" [value]="currentUser.id" #txtID>
         <input type="button" value="press" (click)="onIDClick(txtID.value)">
     </div>
-    <div>
-        username:{{currentUser.username}}
-        <input type="text" [(ngModel)]="currentUser.username" >
-    </div>
-    <div>
-        email:{{currentUser.email}}
-    </div>
-    <div>
-        info.avatar:{{currentUser.info.avatar}}
-    </div>
+
+
+    <ul>
+        <ng-container>
+            <li *ngFor="let user of users">
+                <!--<div>
+                    <div>
+                        username:{{user.username}}
+                        <input type="text" [(ngModel)]="users.username">
+                    </div>
+                    <div>
+                        email:{{user.email}}
+                    </div>
+                    <div> 
+                        info.avatar:{{user.info.avatar}}
+                    </div>
+                </div> -->
+            </li>
+        </ng-container>
+    </ul>
 </div>

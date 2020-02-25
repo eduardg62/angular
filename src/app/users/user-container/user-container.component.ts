@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserModelComponent } from 'src/app/models/user-model/user-model.component';
+import { UserModel } from 'src/app/models/user-model/user-model';
+
 
 
 @Component({
@@ -9,22 +10,20 @@ import { UserModelComponent } from 'src/app/models/user-model/user-model.compone
 })
 export class UserContainerComponent implements OnInit {
 
-  currentUser: UserModelComponent;
-  users: Array<UserModelComponent> = [];
+  currentUser: UserModel;
+  users: UserModel[];
 
   constructor() { }
 
   ngOnInit(): void { 
 
     this.users = [
-      new UserModelComponent (0, "A", "A@A.com"),
-      new UserModelComponent (1, "B", "B@B.com"),
-      new UserModelComponent (2, "C", "C@C.com"),
-      new UserModelComponent (3, "D", "D@D.com"),
-      new UserModelComponent (4, "I", "I@I.com"),
+      new UserModel (0, "A", "A@A.com"),
+      new UserModel (1, "B", "B@B.com"),
+      new UserModel (2, "C", "C@C.com"),
+      new UserModel (3, "D", "D@D.com"),
+      new UserModel (4, "I", "I@I.com"),
     ]
-
-    console.log("User Container Init");
   }
 
   onIDClick(value) {

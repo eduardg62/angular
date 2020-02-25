@@ -17,7 +17,7 @@ export class UserContainerComponent implements OnInit {
   ngOnInit(): void {
 
     this.users = [
-      new UserModelComponent ({id: 0, username: "string", email: string})
+    //  new UserModelComponent ({id: 0, username: "string", email: string})
     ]
 
     this.currentUser = new UserModelComponent();

@@ -1,0 +1,17 @@
+<div class="user-item">
+    <div>
+        id:{{currentUser.id}}
+        <input type="text" [value]="currentUser.id" #txtID>
+        <input type="button" value="press" (click)="onIDClick(txtID.value)">
+    </div>
+    <div>
+        username:{{currentUser.username}}
+        <input type="text" [(ngModel)]="currentUser.username" >
+    </div>
+    <div>
+        email:{{currentUser.email}}
+    </div>
+    <div>
+        info.avatar:{{currentUser.info.avatar}}
+    </div>
+</div>

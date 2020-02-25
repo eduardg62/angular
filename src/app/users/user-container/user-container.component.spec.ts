@@ -10,7 +10,7 @@ describe('UserContainerComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ UserContainerComponent ]
     })
-    .compileComponents(); 
+    .compileComponents();  
   })); 
 
   beforeEach(() => {

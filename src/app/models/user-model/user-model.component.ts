@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-user-model',
@@ -18,7 +19,10 @@ export class UserModelComponent implements OnInit {
       phoneNumber: "01-234-343434"
     }
 
-  constructor() {
+  constructor(id: number, username: string, email: string) { 
+    this.id = id;
+    this.username = username;
+    this.email = email;
    }
 
   ngOnInit(): void {

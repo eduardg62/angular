@@ -10,10 +10,15 @@ import { UserModelComponent } from 'src/app/models/user-model/user-model.compone
 export class UserContainerComponent implements OnInit {
 
   currentUser: UserModelComponent;
+  users: UserModelComponent[] = new Array;
 
   constructor() { }
 
   ngOnInit(): void {
+
+    this.users = [
+      new UserModelComponent ({id: 0, username: "string", email: string})
+    ]
 
     this.currentUser = new UserModelComponent();
     this.currentUser.email = "mail@mail.com";
